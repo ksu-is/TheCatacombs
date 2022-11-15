@@ -109,7 +109,8 @@ def introScene():
 
 if __name__ == "__main__":
   while True:
-    print("Welcome to the Adventure Game!")
+    print("Welcome to the Catacombs!")
+    #changed it to match our game theme.
     print("As an avid traveller, you have decided to visit the Catacombs of Paris.")
     print("However, during your exploration, you find yourself lost.")
     print("You can choose to walk in multiple directions to find a way out.")
