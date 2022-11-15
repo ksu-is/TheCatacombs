@@ -1,4 +1,5 @@
-weapon = False
+weapon = True
+#This will now allow the player to pick up a knife.
 
 def strangeCreature():
   actions = ["fight","flee"]
