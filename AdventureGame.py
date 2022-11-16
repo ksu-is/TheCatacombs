@@ -1,5 +1,5 @@
 weapon = True
-#This will now allow the player to pick up a knife.
+#This will now allow the player to pick up a knife. Which can be used in one of the escape routes.
 
 def strangeCreature():
   actions = ["fight","flee"]
