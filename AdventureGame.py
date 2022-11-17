@@ -111,6 +111,21 @@ def tunnelScene():
       
 #Expanded upon the bridge pathway to create more options
 
+def stonewallScene():
+    directions = ["backward"]
+  print("You move along the cliff. Looking for a way out.")
+  print("You come up to a stone wall. Looks like this way was a dead end.")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: backward")
+    userInput = input()
+    elif userInput == "backward":
+      tunnelScene
+    else:
+      print("Please enter a valid option.")
+      
+#Had to close a pathway as it was getting too much. I am focusing on the other two ways.      
+      
 def cameraScene():
   directions = ["forward","backward"]
   print("You see a camera that has been dropped on the ground. Someone has been here recently. Where would you like to go?")
