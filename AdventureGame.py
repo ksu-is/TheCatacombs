@@ -111,6 +111,21 @@ def tunnelScene():
       
 #Expanded upon the bridge pathway to create more options
 
+def stonewallScene():
+    directions = ["backward"]
+  print("You move along the cliff. Looking for a way out.")
+  print("You come up to a stone wall. Looks like this way was a dead end.")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: backward")
+    userInput = input()
+    elif userInput == "backward":
+      tunnelScene
+    else:
+      print("Please enter a valid option.")
+      
+#Had to close a pathway as it was getting too much. I am focusing on the other two ways
+
 def ladderScene():
   directions = ["forward","backward"]
   print("You move along the left against the cliff. You wonder if you will ever get out of here.")
@@ -136,21 +151,48 @@ def ladderScene():
     else:
       print("Please enter a valid option.")
  #I want to expand upon the rumors of cultists using the catacombs.  
-def stonewallScene():
-    directions = ["backward"]
-  print("You move along the cliff. Looking for a way out.")
-  print("You come up to a stone wall. Looks like this way was a dead end.")
+      
+def cultRoom():
+  directions = ["forward","backward"]
+  print("You come into a large circular room, with a giant alter in the middle. The room is coved in candles and smells of blood.")
+  print("What is this place?")
   userInput = ""
   while userInput not in directions:
-    print("Options: backward")
+    print("Options: backward/forward")
     userInput = input()
-    elif userInput == "backward":
-      tunnelScene
+    if userInput == "backward":
+      tunnelScene()
+    elif userInput == "forward":
+     alterScene()
     else:
       print("Please enter a valid option.")
       
-#Had to close a pathway as it was getting too much. I am focusing on the other two ways.      
+#This section is more of a horror movie vibe
+
+def alterScene():
+  directions = ["forward","backward"]
+  print("You move in to take a closer look at the alter. ")
+  print("The alter is large, human-sized even. Why would they have something like that here?")
+  print("You spin around to take in the whole room and notice a wine bottle in the corner, a modern wine bottle.")
+  print("Someone was down here! Maybe there is a way out around here?")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: backward/forward")
+    userInput = input()
+    if userInput == "backward":
+      print("You quickly turn around, and powerwalk out of the room.")
+      print("This room has too many red flags!")
+      print("Nope! Not doing that. There has to be a better way out!")
+      tunnelScene()
+    elif userInput == "forward":
+      print("What could be in there?")
+      print()
+     crawlspaceScene()
+    else:
+      print("Please enter a valid option.")
       
+#This
+
 def cameraScene():
   directions = ["forward","backward"]
   print("You see a camera that has been dropped on the ground. Someone has been here recently. Where would you like to go?")
