@@ -327,20 +327,24 @@ def cameraScene():
       print("Please enter a valid option.")
       
 def skeltonScene():
-  directions = ["forward","backward"]
+  directions = ["right", "forward","backward"]
   print("You see a skeleton. They have a camera case around their neck. Guess they didn't make it out.")
+  print("")
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: right/forward/backward")
     userInput = input()
     if userInput == "forward":
       darknessScene()
     elif userInput == "backward":
       cameraScene()
+    elif userInput == "right":
+      hiddendoorScene()
     else:
       print("Please enter a valid option.")
       
 #Added more lore into the camera comment. 
+#Edited again to to add a secret tunnel ending
 
 def darknessScene():
   directions = ["forward","backward"]
