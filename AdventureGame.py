@@ -60,8 +60,7 @@ def hauntedRoom():
     print("Options: right/left/backward")
     userInput = input()
     if userInput == "right":
-      print("Multiple goul-like creatures start emerging as you enter the room. You are killed.")
-      quit()
+      bridgeScene()
     elif userInput == "left":
       print("You made it! You've found an exit.")
       quit()
@@ -69,6 +68,28 @@ def hauntedRoom():
       introScene()
     else:
       print("Please enter a valid option.")
+      
+def bridgeScene():
+  directions = ["forward","backward"]
+  print("You come up to a old bridge made of rope and wood; part of the bridge have rotten away.")
+  print("You give the bridge a good shake, and it seems to hold in place.")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+      print("You take a deep breathe, steal yourself, and take your first onto the bridge.")
+      print("Despite its condition and age, its holding strong.")
+      print("")
+      print("As you finish crossing the bridge, the ropes snap.")
+      print("You look down and watch as the bridge collapse. There is no turning back now.")
+      print("Well at least it held until you got across!")
+    elif userInput == "backward":
+      hauntedRoom
+    else:
+      print("Please enter a valid option.")
+      
+#Expanded onto the gameplay area to add another way for the player to get out eventually.
 
 def cameraScene():
   directions = ["forward","backward"]
