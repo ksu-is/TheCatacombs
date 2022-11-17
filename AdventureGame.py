@@ -282,7 +282,34 @@ def sacrificeScene():
     else:
       print("Please enter a valid option.")
       
- #I added another fight scene to play of the knife idea. I wanted the game to have more thrill.     
+ #I added another fight scene to play of the knife idea. I wanted the game to have more thrill.  
+
+def ghoulScene():
+  directions = ["forward","backward"]
+  print("The whispers get louder. You whip your head around looking for the source.")
+  print("The whisper come together in a twisted chorus. They beckon me to come closer.")
+  print("Do I dare move forward? ")
+  print("")
+  print()
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+      print("Multiple ghoul-like creatures start emerging as you enter the room.")
+      print("They lunge for you and you only have a single moment to scream before they tare into you! ")
+      print("You are killed.")
+      print("")
+      print("Oh no! You have completed the Killed Ending.")
+      print("Are you brave enough to restart for a better ending?")
+      print("")
+      quit()
+    elif userInput == "backward":
+      hauntedRoom()
+    else:
+      print("Please enter a valid option.")
+     
+#Added onto the ghoul idea to added another pathway.    
       
 def cameraScene():
   directions = ["forward","backward"]
