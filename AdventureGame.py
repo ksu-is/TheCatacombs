@@ -346,6 +346,24 @@ def skeltonScene():
 #Added more lore into the camera comment. 
 #Edited again to to add a secret tunnel ending
 
+def hiddendoorScene():
+   directions = ["forward","backward"]
+  print("You see a skull sticking out. You pushed it in and a wall of skulls move.")
+  print("Secret Tunnel!")
+  print("")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+      goingupScene()
+    elif userInput == "backward":
+      skeltonScene()
+    else:
+      print("Please enter a valid option.")
+      
+#A secret tunnel.
+
 def darknessScene():
   directions = ["forward","backward"]
   print("You move forward, but the torches you have been lighting no longer work.")
