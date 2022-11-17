@@ -341,7 +341,33 @@ def skeltonScene():
       print("Please enter a valid option.")
       
 #Added more lore into the camera comment. 
-         
+
+def darknessScene():
+  directions = ["forward","backward"]
+  print("You move forward, but the torches you have been lighting no longer work.")
+  print("You try and pry the torch off of the wall, but the mental has rushed solid. It's not budging.")
+  print("Do I go into the darkness or head back?")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+      print("You tentatively go forward.")
+      print("You know you must keep moving. You don't know what, but you won't let your fate be like Camera Guy.")
+      print("As you move forward, you feel a breeze. You must be close to an exit.")
+      print("You break into a run, but soon the ground beneath your feet vanishes.")
+      print("")
+      print("Oh no, you fell of a cliff.")
+      print("Maybe running in the dark is a bad idea.")
+      print("Would you like to try again?")
+      quit()
+    elif userInput == "backward":
+      skeltonScene()
+    else:
+      print("Please enter a valid option.")
+      
+#Darkness is big part of horror, so I added that as a part.
+    
 def showShadowFigure():
   directions = ["right","backward"]
   print("You see a dark shadowy figure appear in the distance. You are creeped out. Where would you like to go?")
