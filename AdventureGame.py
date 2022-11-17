@@ -31,7 +31,7 @@ def strangeCreature():
       showSkeletons()
     else:
       print("Please enter a valid option.")
-# Expanded the fight scene to be more impactful and let the player to know about other endings.
+# Expanded the fight scene to be more impactful and let the player to know about other endings. 
       
 def showSkeletons():
   directions = ["backward","forward"]
@@ -84,12 +84,32 @@ def bridgeScene():
       print("As you finish crossing the bridge, the ropes snap.")
       print("You look down and watch as the bridge collapse. There is no turning back now.")
       print("Well at least it held until you got across!")
+      tunnelScene()
     elif userInput == "backward":
-      hauntedRoom
+      hauntedRoom()
     else:
       print("Please enter a valid option.")
       
 #Expanded onto the gameplay area to add another way for the player to get out eventually.
+
+def tunnelScene():
+  directions = ["right","left","forward"]
+  print("You take a look around.")
+  print("You are faced with a crossroads. Which way to go?")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: right/left/forward")
+    userInput = input()
+    if userInput == "right":
+      stonewallScene()
+    elif userInput == "left":
+      ladderScene()
+    elif userInput == "forward":
+     cultRoom()
+    else:
+      print("Please enter a valid option.")
+      
+#Expanded upon the bridge pathway to create more options
 
 def cameraScene():
   directions = ["forward","backward"]
