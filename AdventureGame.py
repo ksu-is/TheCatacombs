@@ -326,6 +326,22 @@ def cameraScene():
     else:
       print("Please enter a valid option.")
       
+def skeltonScene():
+  directions = ["forward","backward"]
+  print("You see a skeleton. They have a camera case around their neck. Guess they didn't make it out.")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+      darknessScene()
+    elif userInput == "backward":
+      cameraScene()
+    else:
+      print("Please enter a valid option.")
+      
+#Added more lore into the camera comment. 
+         
 def showShadowFigure():
   directions = ["right","backward"]
   print("You see a dark shadowy figure appear in the distance. You are creeped out. Where would you like to go?")
