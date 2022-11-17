@@ -167,7 +167,7 @@ def cultRoom():
     else:
       print("Please enter a valid option.")
       
-#This section is more of a horror movie vibe
+#This section is more of a horror movie vibe.
 
 def alterScene():
   directions = ["forward","backward"]
@@ -191,8 +191,99 @@ def alterScene():
     else:
       print("Please enter a valid option.")
       
-#This
+#I have one large more sections then this pathway will be complete.
 
+def crawlspaceScene():
+  directions = ["forward", "backward"]
+  print("You move into look at the wine bottle. There must be a way out.")
+  print("As I bend down to take a look, I notice a small crawl space off to the side.")
+  print()
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+     print("The small opens into another room. In the middle is a pedestal with a book on it.")
+     print("What is this book doing here?")
+     print()
+     bookScene()
+    elif userInput == "backward":
+        print("This room has too many red flags! I'm out of here!")
+        tunnelScene()
+    else:
+      print("Please enter a valid option.")
+      
+def bookScene():
+  directions = ["forward"]
+  print("You move closer to the book. It's an old leather book. You open the book")
+  print("The pages are yellowed, and the writing seems to be in Latin?")
+  print("The more you flip through the book, the more your veins fill with dread and terror.")
+  print()
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+     print("You slam the book shut.")
+     print("You shouldn't be here.")
+     print()
+     sacrificeScene()
+    else:
+      print("Please enter a valid option.")
+
+def sacrificeScene():
+  directions = ["fight","flee"]
+  print("You slam the book shut and and look around.")
+  print("You hear a voice behind you, 'not like the reading material?'")
+  print("You spin around and see a large, dark figure in a robe")
+  print("They smile and say, 'You're not supposed to be here.' ")
+  print()
+  userInput = ""
+  while userInput not in actions:
+    print("Options: flee/fight")
+    userInput = input()
+    if userInput == "fight":
+      if weapon:
+        print("The cultist moves forward, and you fight with everything you have.")
+        print("Just as you feel you might lose, you remember the knife.")
+        print("You drive the knife into the chest of the cultist")
+        print("Your would-be murder lets of a roar of rage and pain.")
+        print("As he dies, you nice a piece of paper sticking out of his robes.")
+        print("It's a map! Now you can leave this awful place.")
+        print("Congratulations! You have completed the Cultist Fight Ending")
+        print("Though your courage is admirable, you may not have had to fight your way out.")
+        print("Do you want to try again?")
+        print("")
+      else:
+        print("The ghoul-like creature wrestles you to the ground.")
+        print("The cultist seems to deprive a sick joy from seeing your fear.")
+        print("They begin to chock you, you scratch and claw at them, but it does seem to phase them.")
+        print("As you lose consciousness, you hear 'What a marvelous sacrifice!'")
+        print("You have been killed you.")
+        print("")
+        print("If only you had found the knife.... OOPS spoilers!")
+        print("Do you want to try again?")
+        print("")
+      quit()
+    elif userInput == "flee":
+      print("You run around the cultist as fast as you can, and you make it to the crawlspace!")
+      print("Just a little further! just as you reach the end, he drags you by your feet back.")
+      print("You kick and scream, but they just laugh.")
+      print("They let you of your feet, and you get to you feet. Only to be met with a fist to the face.")
+      print("You go down and he drives on top of you. You don't get up again.")
+      print("")
+      print("Oh no! You have been killed by the cultist.")
+      print("If only you had read the warning signs")
+      print("Seriously, the 'smell of blood wasn't a clue?")
+      print("Well, curiosity may have killed the cat, but satisfaction brought it back.")
+      print("Want to try again?")
+      print()
+      quit()
+    else:
+      print("Please enter a valid option.")
+      
+ #I added another fight scene to play of the knife idea. I wanted the game to have more thrill.     
+      
 def cameraScene():
   directions = ["forward","backward"]
   print("You see a camera that has been dropped on the ground. Someone has been here recently. Where would you like to go?")
