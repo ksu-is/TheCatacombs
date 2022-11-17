@@ -391,7 +391,7 @@ def puzzelScene():
     else:
       print("Please enter a valid option.")
       
-#A puzzel is harder than I thought.
+#A puzzel is harder than I thought. 
 
 def darknessScene():
   directions = ["forward","backward"]
