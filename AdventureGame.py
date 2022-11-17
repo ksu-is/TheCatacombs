@@ -4,21 +4,34 @@ weapon = True
 def strangeCreature():
   actions = ["fight","flee"]
   global weapon
-  print("A strange goul-like creature has appeared. You can either run or fight it. What would you like to do?")
+  print("A strange ghoul-like creature has appeared. You can either run or fight it. What would you like to do?")
   userInput = ""
   while userInput not in actions:
     print("Options: flee/fight")
     userInput = input()
     if userInput == "fight":
       if weapon:
-        print("You kill the goul with the knife you found earlier. After moving forward, you find one of the exits. Congats!")
+        print("You spring into an epic battle of wills with this ghoulish monster.")
+        print("Just as you feel you might lose, you remember the knife.")
+        print("You drive the knife into the chest of the ghoul and the beast lets out a pained howl as it drops dead.")
+        print("Congratulations! You have completed the Fight Ending")
+        print("Though your courage is admirable, you may not have had to fight your way out.")
+        print("Do you want to try again?")
+        print("")
       else:
-        print("The goul-like creature has killed you.")
+        print("The ghoul-like creature wrestles you to the ground.")
+        print("It seems to deprive a sick joy from seeing your fear and almost seems to laugh as it goes for the kill.")
+        print("You have been killed you.")
+        print("")
+        print("If only you had found the knife.... OOPS spoilers!")
+        print("Do you want to try again?")
+        print("")
       quit()
     elif userInput == "flee":
       showSkeletons()
     else:
       print("Please enter a valid option.")
+# Expanded the fight scene to be more impactful and let the player to know about other endings.
       
 def showSkeletons():
   directions = ["backward","forward"]
