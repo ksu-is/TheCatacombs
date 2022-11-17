@@ -387,7 +387,10 @@ def showShadowFigure():
 
 def introScene():
   directions = ["left","right","forward"]
-  print("You are at a crossroads, and you can choose to go down any of the four hallways. Where would you like to go?")
+  print("You notices the torches lining across the walls. You move put up your lighter to the ancient torch.")
+  print("It lights! That's good, the battery on your phone is in single digits.")
+  print("Once light has illuminated you way. You notice a crossroads, and you can choose to go down any of the four hallways.") 
+  print("Where would you like to go?")
   userInput = ""
   while userInput not in directions:
     print("Options: left/right/backward/forward")
@@ -402,6 +405,8 @@ def introScene():
       print("You find that this door opens into a wall.")
     else: 
       print("Please enter a valid option.")
+      
+#Added a way to know why the character can see without making it harder.
 
 if __name__ == "__main__":
   while True:
