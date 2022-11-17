@@ -111,6 +111,31 @@ def tunnelScene():
       
 #Expanded upon the bridge pathway to create more options
 
+def ladderScene():
+  directions = ["forward","backward"]
+  print("You move along the left against the cliff. You wonder if you will ever get out of here.")
+  print("")
+  print("Just as your losing hope, you see something moving.")
+  print("What could that be?")
+  print()
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+      sprint("You cautiously move forward. As you get closer you see it!")
+      print("A ladder! You take hold and climb up.")
+      print("You have escaped!.")
+      print("")
+      print("Congradulations! You have completed the Ladder Ending.")
+      print("There are still many secrets to find.")
+      print("Do you dare to reenter?")
+      quit()
+    elif userInput == "backward":
+      tunnelScene()
+    else:
+      print("Please enter a valid option.")
+ #I want to expand upon the rumors of cultists using the catacombs.  
 def stonewallScene():
     directions = ["backward"]
   print("You move along the cliff. Looking for a way out.")
