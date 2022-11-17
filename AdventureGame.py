@@ -356,13 +356,42 @@ def hiddendoorScene():
     print("Options: forward/backward")
     userInput = input()
     if userInput == "forward":
-      goingupScene()
+      puzzelScene()
     elif userInput == "backward":
       skeltonScene()
     else:
       print("Please enter a valid option.")
       
 #A secret tunnel.
+
+def puzzelScene():
+  directions = ["forward","backward"]
+  print("You enter the hidden door. When you step in you start to smell popcorn. Weird.")
+  print("Wait popcorn...An exit!")
+  print("")
+  print()
+  userInput = ""
+  while userInput not in directions:
+    print("Options: forward/backward")
+    userInput = input()
+    if userInput == "forward":
+      print("You go into the room, and see a series of skulls. Another door?")
+      print("The skulls are positioned in the row of six.")
+      print("What to do? Then you see the phrase. 'Up by two down by one.")
+      print("")
+      print("Could it be that simple.")
+      print("You press the skulls 2,4,6,5,3,1")
+      print("The door open into a ladder. You go up!")
+      print("Congradulations, you have escaped the Catacombs.")
+      print("You have completed the Popcorn Ending!")
+      print("There are still more endings to find, do you dare to try again?")
+      quit()
+    elif userInput == "backward":
+      skeltonScene()
+    else:
+      print("Please enter a valid option.")
+      
+#A puzzel is harder than I thought.
 
 def darknessScene():
   directions = ["forward","backward"]
