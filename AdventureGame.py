@@ -232,7 +232,7 @@ def bookScene():
       print("Please enter a valid option.")
 
 def sacrificeScene():
-  directions = ["fight","flee"]
+  actions = ["fight","flee"]
   print("You slam the book shut and and look around.")
   print("You hear a voice behind you, 'not like the reading material?'")
   print("You spin around and see a large, dark figure in a robe")
