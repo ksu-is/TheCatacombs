@@ -112,14 +112,14 @@ def tunnelScene():
 #Expanded upon the bridge pathway to create more options
 
 def stonewallScene():
-    directions = ["backward"]
+  directions = ["backward"]
   print("You move along the cliff. Looking for a way out.")
   print("You come up to a stone wall. Looks like this way was a dead end.")
   userInput = ""
   while userInput not in directions:
     print("Options: backward")
     userInput = input()
-    elif userInput == "backward":
+    if userInput == "backward":
       tunnelScene
     else:
       print("Please enter a valid option.")
@@ -138,7 +138,7 @@ def ladderScene():
     print("Options: forward/backward")
     userInput = input()
     if userInput == "forward":
-      sprint("You cautiously move forward. As you get closer you see it!")
+      print("You cautiously move forward. As you get closer you see it!")
       print("A ladder! You take hold and climb up.")
       print("You have escaped!.")
       print("")
@@ -187,7 +187,7 @@ def alterScene():
     elif userInput == "forward":
       print("What could be in there?")
       print()
-     crawlspaceScene()
+      crawlspaceScene()
     else:
       print("Please enter a valid option.")
       
@@ -347,7 +347,7 @@ def skeltonScene():
 #Edited again to to add a secret tunnel ending
 
 def hiddendoorScene():
-   directions = ["forward","backward"]
+  directions = ["forward","backward"]
   print("You see a skull sticking out. You pushed it in and a wall of skulls move.")
   print("Secret Tunnel!")
   print("")
