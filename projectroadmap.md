@@ -10,4 +10,5 @@
  Work each problem and find a solution. DONE
  Make notes of successful changes, and also unscuccessful attempts. DONE
  Discuss progress with group memebers/Exchange notes DONE
+ Add a quit and ending scene DONE
  Create power point slide to set expectation 
