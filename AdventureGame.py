@@ -32,6 +32,7 @@ def strangeCreature():
     else:
       print("Please enter a valid option.")
 # Expanded the fight scene to be more impactful and let the player to know about other endings. 
+#The orginal dialogue was to bland. Horror has emotion. I just changed the print statements.
       
 def showSkeletons():
   directions = ["backward","forward"]
@@ -90,7 +91,8 @@ def bridgeScene():
     else:
       print("Please enter a valid option.")
       
-#Expanded onto the gameplay area to add another way for the player to get out eventually.
+#Expanded onto the gameplay area to add another way for the player to get out eventually. The area felt to small for a game called "The Catacombs"
+#I did thius by addign a def statement or a "Scene."
 
 def tunnelScene():
   directions = ["right","left","forward"]
@@ -109,7 +111,8 @@ def tunnelScene():
     else:
       print("Please enter a valid option.")
       
-#Expanded upon the bridge pathway to create more options
+#Expanded upon the bridge pathway to create more options. I added another "Scene."
+#Suspense is a big part of horror. 
 
 def stonewallScene():
   directions = ["backward"]
@@ -124,7 +127,8 @@ def stonewallScene():
     else:
       print("Please enter a valid option.")
       
-#Had to close a pathway as it was getting too much. I am focusing on the other two ways
+#Had to close a pathway as it was getting too much. I am focusing on the other two ways, left and forward.
+#This was done by adding a Scene where the character must turn back.
 
 def ladderScene():
   directions = ["forward","backward"]
@@ -150,8 +154,10 @@ def ladderScene():
       tunnelScene()
     else:
       print("Please enter a valid option.")
- #I want to expand upon the rumors of cultists using the catacombs.  
       
+#The idea for a ladder was simple as the cultist need an easy way in and out. It also gives a not hopelessness to the area.
+#I want to expand upon the rumors of cultists using the catacombs.  
+
 def cultRoom():
   directions = ["forward","backward"]
   print("You come into a large circular room, with a giant alter in the middle. The room is coved in candles and smells of blood.")
@@ -168,6 +174,7 @@ def cultRoom():
       print("Please enter a valid option.")
       
 #This section is more of a horror movie vibe.
+#This Scene is muc hliek the oines before it.
 
 def alterScene():
   directions = ["forward","backward"]
@@ -192,6 +199,7 @@ def alterScene():
       print("Please enter a valid option.")
       
 #I have one large more sections then this pathway will be complete.
+#Scene is the same as the ones before, only the direction, dialogue and scene que change.
 
 def crawlspaceScene():
   directions = ["forward", "backward"]
@@ -282,7 +290,8 @@ def sacrificeScene():
     else:
       print("Please enter a valid option.")
       
- #I added another fight scene to play of the knife idea. I wanted the game to have more thrill.  
+#I added another fight scene to play of the knife idea. I wanted the game to have more thrill.  
+#This fight scene is modeled after the ghoul fight scene. I took that scen and crafted it to fit theis scenario. 
 
 def ghoulScene():
   directions = ["forward","backward"]
