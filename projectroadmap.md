@@ -11,4 +11,4 @@
  Make notes of successful changes, and also unscuccessful attempts. DONE
  Discuss progress with group memebers/Exchange notes DONE
  Add a quit and ending scene DONE
- Create power point slide to set expectation 
+ Create power point slide to set expectation DONE
