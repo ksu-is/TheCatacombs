@@ -10,3 +10,4 @@ I added a bridge scene that hte player must get across, if the choose, and then 
 I added a ladder escape option, and am currently working on a cultist murder end. I had to close one walkway as it was getting overwhleming.
 The cultist room turned into three scenes as I needed a way for the character to be distracted, in a small room, and have cultist appear.
 I did all the above by adding scenes by adding def statements and through else, if statements. 
+I added a quit scene and an ending scene so the game does not automatically restart.
