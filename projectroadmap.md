@@ -9,5 +9,5 @@
  Assign each problem to a group member. DONE
  Work each problem and find a solution. DONE
  Make notes of successful changes, and also unscuccessful attempts. DONE
- Discuss progress with group memebrs/Exchange notes
+ Discuss progress with group memebers/Exchange notes DONE
  Create power point slide to set expectation 
