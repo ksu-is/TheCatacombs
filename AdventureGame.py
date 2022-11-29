@@ -26,7 +26,8 @@ def strangeCreature():
         print("If only you had found the knife.... OOPS spoilers!")
         print("Do you want to try again?")
         print("")
-      quit()
+        print("You have completed the Ghoul Death Ending.")
+        EndingAchieved()
     elif userInput == "flee":
       showSkeletons()
     else:
@@ -35,12 +36,12 @@ def strangeCreature():
 #The orginal dialogue was to bland. Horror has emotion. I just changed the print statements.
       
 def showSkeletons():
-  directions = ["backward","forward"]
+  directions = ["backward","forward", "quit"]
   global weapon
   print("You see a wall of skeletons as you walk into the room. Someone is watching you. Where would you like to go?")
   userInput = ""
   while userInput not in directions:
-    print("Options: left/backward/forward")
+    print("Options: left/backward/forward/quit")
     userInput = input()
     if userInput == "left":
       print("You find that this door opens into a wall. You open some of the drywall to discover a knife.")
@@ -49,34 +50,38 @@ def showSkeletons():
       introScene()
     elif userInput == "forward":
       strangeCreature()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
 
 def hauntedRoom():
-  directions = ["right","left","backward"]
+  directions = ["right","left","backward", "quit"]
   print("You hear strange voices. You think you have awoken some of the dead. Where would you like to go?")
   userInput = ""
   while userInput not in directions:
-    print("Options: right/left/backward")
+    print("Options: right/left/backward/quit")
     userInput = input()
     if userInput == "right":
       bridgeScene()
     elif userInput == "left":
-      print("You made it! You've found an exit.")
-      quit()
+      print("Well, I'm already here, might as well investigate!")
+      ghoulScene()
     elif userInput == "backward":
       introScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
 def bridgeScene():
-  directions = ["forward","backward"]
+  directions = ["forward","backward", "quit"]
   print("You come up to a old bridge made of rope and wood; part of the bridge have rotten away.")
   print("You give the bridge a good shake, and it seems to hold in place.")
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
       print("You take a deep breathe, steal yourself, and take your first onto the bridge.")
@@ -88,6 +93,8 @@ def bridgeScene():
       tunnelScene()
     elif userInput == "backward":
       hauntedRoom()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
@@ -95,12 +102,12 @@ def bridgeScene():
 #I did thius by addign a def statement or a "Scene."
 
 def tunnelScene():
-  directions = ["right","left","forward"]
+  directions = ["right","left","forward", "quit"]
   print("You take a look around.")
   print("You are faced with a crossroads. Which way to go?")
   userInput = ""
   while userInput not in directions:
-    print("Options: right/left/forward")
+    print("Options: right/left/forward/quit")
     userInput = input()
     if userInput == "right":
       stonewallScene()
@@ -108,6 +115,8 @@ def tunnelScene():
       ladderScene()
     elif userInput == "forward":
      cultRoom()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
@@ -115,15 +124,17 @@ def tunnelScene():
 #Suspense is a big part of horror. 
 
 def stonewallScene():
-  directions = ["backward"]
+  directions = ["backward", "quit"]
   print("You move along the cliff. Looking for a way out.")
   print("You come up to a stone wall. Looks like this way was a dead end.")
   userInput = ""
   while userInput not in directions:
-    print("Options: backward")
+    print("Options: backward/quit")
     userInput = input()
     if userInput == "backward":
       tunnelScene
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
@@ -131,7 +142,7 @@ def stonewallScene():
 #This was done by adding a Scene where the character must turn back.
 
 def ladderScene():
-  directions = ["forward","backward"]
+  directions = ["forward","backward", "quit"]
   print("You move along the left against the cliff. You wonder if you will ever get out of here.")
   print("")
   print("Just as your losing hope, you see something moving.")
@@ -139,7 +150,7 @@ def ladderScene():
   print()
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
       print("You cautiously move forward. As you get closer you see it!")
@@ -147,9 +158,9 @@ def ladderScene():
       print("You have escaped!.")
       print("")
       print("Congradulations! You have completed the Ladder Ending.")
-      print("There are still many secrets to find.")
-      print("Do you dare to reenter?")
-      quit()
+      EndingAchieved()
+    elif userInput == "quit":
+      QuitScene()
     elif userInput == "backward":
       tunnelScene()
     else:
@@ -159,17 +170,19 @@ def ladderScene():
 #I want to expand upon the rumors of cultists using the catacombs.  
 
 def cultRoom():
-  directions = ["forward","backward"]
+  directions = ["forward","backward", "quit"]
   print("You come into a large circular room, with a giant alter in the middle. The room is coved in candles and smells of blood.")
   print("What is this place?")
   userInput = ""
   while userInput not in directions:
-    print("Options: backward/forward")
+    print("Options: backward/forward/quit")
     userInput = input()
     if userInput == "backward":
       tunnelScene()
     elif userInput == "forward":
      alterScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
@@ -177,14 +190,14 @@ def cultRoom():
 #This Scene is muc hliek the oines before it.
 
 def alterScene():
-  directions = ["forward","backward"]
+  directions = ["forward","backward", "quit"]
   print("You move in to take a closer look at the alter. ")
   print("The alter is large, human-sized even. Why would they have something like that here?")
   print("You spin around to take in the whole room and notice a wine bottle in the corner, a modern wine bottle.")
   print("Someone was down here! Maybe there is a way out around here?")
   userInput = ""
   while userInput not in directions:
-    print("Options: backward/forward")
+    print("Options: backward/forward/quit")
     userInput = input()
     if userInput == "backward":
       print("You quickly turn around, and powerwalk out of the room.")
@@ -195,6 +208,8 @@ def alterScene():
       print("What could be in there?")
       print()
       crawlspaceScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
@@ -202,13 +217,13 @@ def alterScene():
 #Scene is the same as the ones before, only the direction, dialogue and scene que change.
 
 def crawlspaceScene():
-  directions = ["forward", "backward"]
+  directions = ["forward", "backward", "quit"]
   print("You move into look at the wine bottle. There must be a way out.")
   print("As I bend down to take a look, I notice a small crawl space off to the side.")
   print()
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
      print("The small opens into another room. In the middle is a pedestal with a book on it.")
@@ -218,24 +233,28 @@ def crawlspaceScene():
     elif userInput == "backward":
         print("This room has too many red flags! I'm out of here!")
         tunnelScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
 def bookScene():
-  directions = ["forward"]
+  directions = ["forward", "quit"]
   print("You move closer to the book. It's an old leather book. You open the book")
   print("The pages are yellowed, and the writing seems to be in Latin?")
   print("The more you flip through the book, the more your veins fill with dread and terror.")
   print()
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
      print("You slam the book shut.")
      print("You shouldn't be here.")
      print()
      sacrificeScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
 
@@ -248,7 +267,7 @@ def sacrificeScene():
   print()
   userInput = ""
   while userInput not in actions:
-    print("Options: flee/fight")
+    print("Options: flee/fight/")
     userInput = input()
     if userInput == "fight":
       if weapon:
@@ -258,21 +277,23 @@ def sacrificeScene():
         print("Your would-be murder lets of a roar of rage and pain.")
         print("As he dies, you nice a piece of paper sticking out of his robes.")
         print("It's a map! Now you can leave this awful place.")
-        print("Congratulations! You have completed the Cultist Fight Ending")
         print("Though your courage is admirable, you may not have had to fight your way out.")
         print("Do you want to try again?")
         print("")
+        print("Congratulations! You have completed the Cultist Knife Fight Ending")
+        EndingAchieved()
       else:
-        print("The ghoul-like creature wrestles you to the ground.")
+        print("The cultist wrestles you to the ground.")
         print("The cultist seems to deprive a sick joy from seeing your fear.")
-        print("They begin to chock you, you scratch and claw at them, but it does seem to phase them.")
+        print("They begin to choke you, you scratch and claw at them, but it does seem to phase them.")
         print("As you lose consciousness, you hear 'What a marvelous sacrifice!'")
         print("You have been killed you.")
         print("")
         print("If only you had found the knife.... OOPS spoilers!")
         print("Do you want to try again?")
         print("")
-      quit()
+        print("You have completed the Cultist Fight Ending.")
+        EndingAchieved()
     elif userInput == "flee":
       print("You run around the cultist as fast as you can, and you make it to the crawlspace!")
       print("Just a little further! just as you reach the end, he drags you by your feet back.")
@@ -286,7 +307,8 @@ def sacrificeScene():
       print("Well, curiosity may have killed the cat, but satisfaction brought it back.")
       print("Want to try again?")
       print()
-      quit()
+      print("You ahve completed the Cultist Death Ending!")
+      EndingAchieved()
     else:
       print("Please enter a valid option.")
       
@@ -294,7 +316,7 @@ def sacrificeScene():
 #This fight scene is modeled after the ghoul fight scene. I took that scen and crafted it to fit theis scenario. 
 
 def ghoulScene():
-  directions = ["forward","backward"]
+  directions = ["forward","backward", "quit"]
   print("The whispers get louder. You whip your head around looking for the source.")
   print("The whisper come together in a twisted chorus. They beckon me to come closer.")
   print("Do I dare move forward? ")
@@ -302,17 +324,18 @@ def ghoulScene():
   print()
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
       print("Multiple ghoul-like creatures start emerging as you enter the room.")
       print("They lunge for you and you only have a single moment to scream before they tare into you! ")
       print("You are killed.")
-      print("")
-      print("Oh no! You have completed the Killed Ending.")
       print("Are you brave enough to restart for a better ending?")
       print("")
-      quit()
+      print("Oh no! You have completed the Ghoul Death Ending.")
+      EndingAchieved()
+    elif userInput == "quit":
+      QuitScene()
     elif userInput == "backward":
       hauntedRoom()
     else:
@@ -321,27 +344,30 @@ def ghoulScene():
 #Added onto the ghoul idea to added another pathway.    
       
 def cameraScene():
-  directions = ["forward","backward"]
-  print("You see a camera that has been dropped on the ground. Someone has been here recently. Where would you like to go?")
+  directions = ["forward","backward," "quit"]
+  print("You see a camera that has been dropped on the ground.")
+  print("Someone has been here recently. Where would you like to go?")
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
-      print("You made it! You've found an exit.")
-      quit()
+      print("You slowly move forward. Someone was here once, Would they be friendly?")
+      skeltonScene()
     elif userInput == "backward":
       showShadowFigure()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
 def skeltonScene():
-  directions = ["right", "forward","backward"]
+  directions = ["right", "forward","backward," "quit"]
   print("You see a skeleton. They have a camera case around their neck. Guess they didn't make it out.")
   print("")
   userInput = ""
   while userInput not in directions:
-    print("Options: right/forward/backward")
+    print("Options: right/forward/backward/quit")
     userInput = input()
     if userInput == "forward":
       darknessScene()
@@ -349,6 +375,8 @@ def skeltonScene():
       cameraScene()
     elif userInput == "right":
       hiddendoorScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
@@ -356,32 +384,34 @@ def skeltonScene():
 #Edited again to to add a secret tunnel ending
 
 def hiddendoorScene():
-  directions = ["forward","backward"]
+  directions = ["forward","backward," "quit"]
   print("You see a skull sticking out. You pushed it in and a wall of skulls move.")
   print("Secret Tunnel!")
   print("")
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
       puzzelScene()
     elif userInput == "backward":
       skeltonScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
 #A secret tunnel.
 
 def puzzelScene():
-  directions = ["forward","backward"]
+  directions = ["forward","backward," "quit"]
   print("You enter the hidden door. When you step in you start to smell popcorn. Weird.")
   print("Wait popcorn...An exit!")
   print("")
   print()
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
       print("You go into the room, and see a series of skulls. Another door?")
@@ -394,22 +424,24 @@ def puzzelScene():
       print("Congradulations, you have escaped the Catacombs.")
       print("You have completed the Popcorn Ending!")
       print("There are still more endings to find, do you dare to try again?")
-      quit()
+      EndingAchieved()
     elif userInput == "backward":
       skeltonScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
 #A puzzel is harder than I thought. 
 
 def darknessScene():
-  directions = ["forward","backward"]
+  directions = ["forward","backward," "quit"]
   print("You move forward, but the torches you have been lighting no longer work.")
   print("You try and pry the torch off of the wall, but the mental has rushed solid. It's not budging.")
   print("Do I go into the darkness or head back?")
   userInput = ""
   while userInput not in directions:
-    print("Options: forward/backward")
+    print("Options: forward/backward/quit")
     userInput = input()
     if userInput == "forward":
       print("You tentatively go forward.")
@@ -419,41 +451,47 @@ def darknessScene():
       print("")
       print("Oh no, you fell of a cliff.")
       print("Maybe running in the dark is a bad idea.")
-      print("Would you like to try again?")
-      quit()
+      print("You completed the Cliff Ending!")
+      EndingAchieved()
     elif userInput == "backward":
       skeltonScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
       
 #Darkness is big part of horror, so I added that as a part.
     
 def showShadowFigure():
-  directions = ["right","backward"]
+  directions = ["right","backward," "quit"]
   print("You see a dark shadowy figure appear in the distance. You are creeped out. Where would you like to go?")
   userInput = ""
   while userInput not in directions:
-    print("Options: right/left/backward")
+    print("Options: right/left/backward/quit")
     userInput = input()
     if userInput == "right":
       cameraScene()
     elif userInput == "left":
-      print("You find that this door opens into a wall.")
+      print("Curosity gets the better of you.")
+      ghoulScene()
     elif userInput == "backward":
       introScene()
+    elif userInput == "quit":
+      QuitScene()
     else:
       print("Please enter a valid option.")
 
 
 def introScene():
-  directions = ["left","right","forward"]
+  directions = ["left","right","forward," "quit"]
   print("You notices the torches lining across the walls. You move put up your lighter to the ancient torch.")
   print("It lights! That's good, the battery on your phone is in single digits.")
-  print("Once light has illuminated you way. You notice a crossroads, and you can choose to go down any of the four hallways.") 
+  print("Once light has illuminated you way.")
+  print("You notice a crossroads, and you can choose to go down any of the four hallways.") 
   print("Where would you like to go?")
   userInput = ""
   while userInput not in directions:
-    print("Options: left/right/backward/forward")
+    print("Options: left/right/backward/forward/quit")
     userInput = input()
     if userInput == "left":
       showShadowFigure()
@@ -463,8 +501,43 @@ def introScene():
       hauntedRoom()
     elif userInput == "backward":
       print("You find that this door opens into a wall.")
+    elif userInput == "quit":
+      QuitScene()
     else: 
       print("Please enter a valid option.")
+
+def QuitScene():
+  directions = ["quit", "restart"]
+  print("You have choosen to end you adventure.")
+  print("What to scary for you? If you find your courage comeback to find all the secrets of The Catacobs!")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: quit/ restart")
+    userInput = input()
+    if userInput == "quit":
+      break
+    elif userInput == "restart":
+      print("It seems uyou refound your courage! You have choosen to restart!")
+      introScene()
+    else:
+      print("Please enter a valid option.")
+
+def EndingAchieved():
+  directions = ["quit", "restart"]
+  print("You have found one of our many endings!")
+  print("Do you have the courage to comeback and find all the secrets of The Catacobs!")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: quit/ restart")
+    userInput = input()
+    if userInput == "quit":
+      QuitScene()
+    elif userInput == "restart":
+      print("It seems you refound your courage! You have choosen to restart!")
+      introScene()
+    else:
+      print("Please enter a valid option.")
+
       
 #Added a way to know why the character can see without making it harder.
 
