@@ -157,7 +157,7 @@ def ladderScene():
       print("A ladder! You take hold and climb up.")
       print("You have escaped!.")
       print("")
-      print("Congradulations! You have completed the Ladder Ending.")
+      print("Congratulations! You have completed the Ladder Ending.")
       EndingAchieved()
     elif userInput == "quit":
       QuitScene()
@@ -280,7 +280,7 @@ def sacrificeScene():
         print("Though your courage is admirable, you may not have had to fight your way out.")
         print("Do you want to try again?")
         print("")
-        print("Congratulations! You have completed the Cultist Knife Fight Ending")
+        print("Congradulations! You have completed the Cultist Knife Fight Ending")
         EndingAchieved()
       else:
         print("The cultist wrestles you to the ground.")
@@ -307,7 +307,7 @@ def sacrificeScene():
       print("Well, curiosity may have killed the cat, but satisfaction brought it back.")
       print("Want to try again?")
       print()
-      print("You ahve completed the Cultist Death Ending!")
+      print("You have completed the Cultist Death Ending!")
       EndingAchieved()
     else:
       print("Please enter a valid option.")
